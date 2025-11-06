@@ -66,7 +66,7 @@ A pattern matching construct that allows you to conditionally bind variables bas
 
 ### sum
 
-An enum type wrapper around Option ```<T>``` which can be either Some (value) or None.
+An enum type wrapper around Option ``<T>`` which can be either Some (value) or None.
 
 ### range
 
@@ -76,15 +76,15 @@ Represents a sequence of numbers, often used in loops for iteration purposes.
 
 A variable redeclaration with the same name but different value and/or scope within the same context.
 
-Function
+### Function
 
 A block of code designed to carry out a specified task. In Rust, it's a crucial part of the language as Rust is almost like a functional programming language.
 
-Unit Function
+### Unit Function
 
 A function that doesn't return any value but does some work when called.
 
-Return Value
+### Return Value
 
 The result given by a function upon completion. It can be explicitly defined or implicitly returned as unit type in case of unit functions.
 
@@ -160,9 +160,6 @@ Immutable
 
 Cannot be changed after initialization, such as new user being immutable by default.
 
-
-
-
 Ownership in Rust
 
 Learn the concept of ownership, which is a fundamental aspect of memory management in Rust.
@@ -193,7 +190,7 @@ A growable, owned sequence of characters. It is mutable and its size can change 
 
 Vector
 
-A collection of items that can be of any type. It is similar to arrays or lists in other languages. In Rust, vectors are represented as Vec<T>, where T is the type of elements contained within the vector.
+A collection of items that can be of any type. It is similar to arrays or lists in other languages. In Rust, vectors are represented as Vec `<T>`, where T is the type of elements contained within the vector.
 
 Immutable
 
@@ -222,4 +219,3 @@ Borrowing is a mechanism in Rust that allows multiple references to the same dat
 Mutable References
 
 A mutable reference is a reference to a value that can be changed during its lifetime. In Rust, only one mutable reference can exist at any given time for a particular piece of data, ensuring memory safety and preventing race conditions.
-
