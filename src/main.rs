@@ -39,12 +39,13 @@ fn main() {
     // let var1 = vec![1, 2, 3, 4, 5, 6, 0];
     // let get: &Vec<i32> = &var1.iter().map(|f| f * f).collect();
     // print!("{:?}", get);
-    
+
     let mut sss = 555;
     {
         let sss = 888;
-        println!("{sss}")
+        println!("{sss}");
+        println!("    7 ");
 
     }
-    println!("{sss}")
+    println!("{sss}");
 }
