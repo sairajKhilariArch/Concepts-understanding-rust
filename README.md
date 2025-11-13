@@ -88,134 +88,134 @@ A function that doesn't return any value but does some work when called.
 
 The result given by a function upon completion. It can be explicitly defined or implicitly returned as unit type in case of unit functions.
 
-Borrowing
+### Borrowing
 
 Concept in Rust which ensures efficient memory usage by safely lending values to other parts of the code without taking ownership away from their original scopes.
 
-Panic
+### Panic
 
 A special call syntax in Rust used to stop all execution in a program; it's not commonly used in production code but can be helpful during development or for certain error handling scenarios.
 
-Control Flow
+### Control Flow
 
 The order in which code is executed based on conditions and loops. In Rust, control flow includes if, else, match, and looping constructs like for or while.
 
-Enumerator (Enum)
+### Enumerator (Enum)
 
 A data type representing a set of values where each value represents a distinct case. An example in the transcript is the Option ````< T >``` enum with cases Some(T) and None.
 
-Move
+### Move
 
 In Rust, move occurs when ownership of a variable is transferred from one scope to another without any borrowing mechanism being used. This results in the original variable becoming invalid.
 
-Copy
+### Copy
 
 A special trait in Rust which allows values of certain types (e.g., integers and booleans) to be copied instead of moved or borrowed when assigned or passed as arguments.
 
-Vector
+### Vector
 
 A dynamic array data structure provided by Rust's standard library, used for storing a variable number of elements efficiently. It can grow or shrink in size during runtime.
 
-Shadowing
+### Shadowing
 
 In Rust, the ability to redefine a variable with a new value within the same scope hiding the original definition but not invalidating it. This is useful when changing types locally without affecting other parts of the code.
 
-Struct
+### Struct
 
 A keyword used to organize similar data in a structure. It is like an object in JavaScript or Python dictionary where you are organizing data in a structured way.
 
-Field
+### Field
 
 The values of the struct, such as first name and last name string for person struct.
 
-Debug
+### Debug
 
 An attribute that allows printing the whole struct instead of specific fields.
 
-Type
+### Type
 
 The kind of value each field can hold, such as string or unsigned integer 8 bits in size (u8).
 
-Instance
+### Instance
 
 A created struct with data in its fields, like Fredo equals person with first name Sanchez and age H25.
 
-Option
+### Option
 
 Represents the absence of a value or a specific type that could be (for example) an unsigned integer for eight bits in size (u8) or none.
 
-Implementation
+### Implementation
 
 A keyword used to extend struct by adding functions and associated code.
 
-Associated Function
+### Associated Function
 
 A function that doesn't require self, allowing easy creation of a user instance with new constructor.
 
-Constructor
+### Constructor
 
 Automates tedious repetitive tasks when creating instances, like setting the active field to true in user struct.
 
-Immutable
+### Immutable
 
 Cannot be changed after initialization, such as new user being immutable by default.
 
-Ownership in Rust
+### Ownership in Rust
 
 Learn the concept of ownership, which is a fundamental aspect of memory management in Rust.
 
-Moving and Borrowing
+### Moving and Borrowing
 
 Explore how Rust handles the movement and borrowing of values, ensuring memory safety and preventing data races.
 
-Scoping Rules and Lifetimes
+### Scoping Rules and Lifetimes
 
 Understand the scoping rules and lifetimes in Rust that govern the lifetime of references and prevent dangling pointers.
 
-Pointer Types in Rust
+### Pointer Types in Rust
 
 Discover Rust's pointer types, commonly known as references, and how they facilitate safe and efficient memory management.
 
-String
+### String
 
 A sequence of characters, typically used to represent text. In Rust, there are two primary types of strings: string slices (&str) and strings (String).
 
-String slice
+### String slice
 
 A reference to a sequence of characters in memory. It is immutable and has a fixed size. Represented as &str.
 
-String (this is not repeated!)
+### String (this is not repeated!)
 
 A growable, owned sequence of characters. It is mutable and its size can change during runtime. Represented as String.
 
-Vector
+### Vector
 
 A collection of items that can be of any type. It is similar to arrays or lists in other languages. In Rust, vectors are represented as Vec `<T>`, where T is the type of elements contained within the vector.
 
-Immutable
+### Immutable
 
 A value that cannot be changed after it has been created. Strings slices and vectors can be immutable.
 
-Mutable
+### Mutable
 
 A value that can be changed after it has been created. Only strings and mutable vectors can be mutable.
 
-Borrowing
+### Borrowing
 
 The process of temporarily accessing a resource without taking ownership. In Rust, borrowing is used to allow multiple references to the same data without violating memory safety rules.
 
-Ownership
+### Ownership
 
 The concept that a value can only have one owner at a time in Rust. When a value is transferred or dropped, its previous owner loses access to it.
 
-Slice
+### Slice
 
 A view into a contiguous sequence of elements, such as an array, string, or vector. It has a fixed size and does not own the data it points to. Represented as [T].
 
-Borrowing and Lifetimes
+### Borrowing and Lifetimes
 
 Borrowing is a mechanism in Rust that allows multiple references to the same data without violating memory safety rules. Lifetimes ensure that borrowed references remain valid for as long as they are needed, preventing dangling pointers or use-after-free errors.
 
-Mutable References
+### Mutable References
 
 A mutable reference is a reference to a value that can be changed during its lifetime. In Rust, only one mutable reference can exist at any given time for a particular piece of data, ensuring memory safety and preventing race conditions.
