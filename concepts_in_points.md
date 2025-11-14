@@ -1,5 +1,4 @@
-
-## Key Terms
+# Key Terms of RUST 🦀
 
 ### Binary application/package
 
@@ -10,6 +9,11 @@ Executables generated from Rust source files, typically containing a main functi
 A collection of Rust modules providing functionality meant to be shared among multiple projects.
 
 ### Cargo.toml
+
+| col1 | col2 | col3 |
+| ---- | ---- | ---- |
+|      |      |      |
+|      |      |      |
 
 A configuration file read by Cargo, listing metadata (e.g., name, version) and dependencies required by the package.
 
