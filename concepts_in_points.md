@@ -10,11 +10,6 @@ A collection of Rust modules providing functionality meant to be shared among mu
 
 ### Cargo.toml
 
-| col1 | col2 | col3 |
-| ---- | ---- | ---- |
-|      |      |      |
-|      |      |      |
-
 A configuration file read by Cargo, listing metadata (e.g., name, version) and dependencies required by the package.
 
 ### Shadowing
