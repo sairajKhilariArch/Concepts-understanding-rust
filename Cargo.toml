@@ -2,5 +2,6 @@
 name = "Concepts-understanding-rust"
 version = "0.1.0"
 edition = "2024"
+default-run = "Concepts-understanding-rust"
 
 [dependencies]

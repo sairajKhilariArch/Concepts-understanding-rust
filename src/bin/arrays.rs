@@ -18,6 +18,9 @@ fn main(){
     println!("{:?}",a.len()); //^ 5
 
     // *
+    
+    // let b = a.copy_within(0,3);
+    // println!("{:?}",b);
 
 
 
