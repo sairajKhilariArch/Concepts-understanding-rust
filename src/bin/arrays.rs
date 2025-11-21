@@ -32,9 +32,21 @@ fn main(){
                 // ? can change the items in the array
                 
 
-    println!("{:?}",aa);
-    aa[0] = "Hello!....";
-    println!("{:?}",aa);
+    println!("{:?}",aa); //^ ["hello", "hi", "how", "are", "you"]
+    aa[0] = "Hello!...."; // ^ 
+    println!("{:?}",aa); // ^ ["Hello!....", "hi", "how", "are", "you"]
 
+    // ?pretty printing the array with # after :  before ?
+    // ? each index in each line
+    println!("{:#?}",aa);
+        // ^    [
+        // ^    "Hello!....",
+        // ^    "hi",
+        // ^    "how",
+        // ^    "are",
+        // ^    "you",
+        // ^]
+    
+    
 
 }
