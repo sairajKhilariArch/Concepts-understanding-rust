@@ -49,3 +49,8 @@ fn main() {
 // ? A trait is called  an interface or protocal  in other languages...
 
 // ? eg  a built in traits such as DISPLAY trait
+
+
+
+
+// & SUMMERY :  traits are like contracts which staits that if you implement them then they will provide you with certain things as the output is define but not the input  .....
