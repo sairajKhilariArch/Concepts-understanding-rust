@@ -35,11 +35,11 @@ fn main(){
     println!("{:?}",aa); //^ ["hello", "hi", "how", "are", "you"]
     aa[0] = "Hello!...."; // ^ 
     println!("{:?}",aa); // ^ ["Hello!....", "hi", "how", "are", "you"]
-
+    println!("{aa:?}"); // ^ ["Hello!....", "hi", "how", "are", "you"]
     // ?pretty printing the array with # after :  before ?
     // ? each index in each line
     println!("{:#?}",aa);
-        // ^    [
+        // ^[
         // ^    "Hello!....",
         // ^    "hi",
         // ^    "how",
