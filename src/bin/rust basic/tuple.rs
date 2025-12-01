@@ -18,8 +18,10 @@
 fn main(){
 
     let t_uple = ("hi","hello","how","are","you",(2,4,6,8,10));
+//&index position(  0     1      2      3    4  5:(0,1,2,3,4))
 
-    // let a =t_uple.5.3; //^ 8
+
+    let _a =t_uple.5.3; //^ 8
 
     let (a,b,c,d,e,f) = t_uple;
 
@@ -28,7 +30,7 @@ fn main(){
     println!("{}",c);    //^ how
     println!("{}",d);    //^ are 
     println!("{}",e);    // ^ you
-    println!("{:#?}",f); // ^     (
+    println!("{:#?}",f); // ^ (
                          // ^     2,
                          // ^     4,
                          // ^     6,
