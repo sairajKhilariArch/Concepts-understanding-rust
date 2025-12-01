@@ -9,10 +9,10 @@
 
             // ~ pythons tuple == rusts tuple
 
-            // ^ | Python | Rust  | Mutable? | Same Types? |
-            // ^ | ------ | ----- | -------- | ----------- |
-            // ^ | list   | Vec   | ✅ Yes   | Usually     |
-            // ^ | tuple  | tuple | ❎ No    | No          |
+            // & | Python | Rust  | Mutable? | Same Types? |
+            // & | ------ | ----- | -------- | ----------- |
+            // & | list   | Vec   | ✅ Yes   | Usually     |
+            // & | tuple  | tuple | ❎ No    | No          |
 
             
 fn main(){
