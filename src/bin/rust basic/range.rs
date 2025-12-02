@@ -3,17 +3,19 @@
             // ? RANGE is a type of 'datatype'
             // ? in which you can give a range in between of character or integer 
             // ! float ,array and other iterable datatype are not included for this type of range
+            // * ITERATE:
+            // & to ITERATE means to progress over the elements of a collection one by one......
 
             // ? it is a iterable datatype 
 
             // ? for range two input: 
                                     //& from 
-                                    //& end
+                                    //&       &   end
                                     //& like : 1..100
-                                    // !here 100 in not included
+                                    // !here 100 in not included (exclude)
                                     // & 1..=100
-                                    // ^ no it is included
-
+                                    // ! here 1 it is included
+            // ? std::ops::Range<argument_of_generic_type>
 
 
 
@@ -46,3 +48,6 @@ fn main(){
     }
 
 }
+
+
+
