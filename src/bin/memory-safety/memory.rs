@@ -1,0 +1,23 @@
+// * MEMORY :
+
+            // ? Ownership is a set of rules that the compiler checks for to ensure the program will be free of memory errors
+
+            // ? Memory refers to the area of your computer that is responsible for storing the information your programs use ....
+
+            // ? it's ideal to free memory  when it is no longer in use ...
+
+            // ? programming languages implement different strategies for memory management...
+
+// *Manual Memory Management :
+                        // ? in language like C and C++ ,the programmer is responsible for allocating (requesting memory ) and deallocating it (giving it back to the computer ).....
+
+                        // ? Unfortunetely human beings make mistakes ....
+                            // forgatting to deallocate memory that has been allocated 
+                            // trying to deallocate memory that has already been deallocated..
+
+
+// * Automation Garbage Collection :
+                            // ? Languages like JAVA ,PYTHON ,RUBY and GO implement a tool called the garbage  collector ...
+                            // ?the garbage collector looks for data that is no longer in use and deallocaters it. it "automates" the cleanup process
+                            // ? the gabage collecter itself occupies memory and can run at disadvantagous times....
+                            
