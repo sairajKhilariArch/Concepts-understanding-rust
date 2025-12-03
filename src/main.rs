@@ -1,6 +1,3 @@
-fn main(){
-
-    
-    println!("hello!, world");
-    // println!("{:^10}",a);
+fn main() {
+    print!("hello")
 }
