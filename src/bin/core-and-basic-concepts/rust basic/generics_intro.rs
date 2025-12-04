@@ -1,4 +1,4 @@
 // * Generics :
-                // & Generics is a type argument 
+//                 & Generics is a type argument
 
-                //                     (^^^^^^^^)> input for the paramater  
+//                                     (^^^^^^^^)> input for the paramater

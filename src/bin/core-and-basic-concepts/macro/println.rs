@@ -1,9 +1,6 @@
 // * println! :
-            // ? println is a macro 
+//             ? println is a macro
 
-
-
-
-fn main(){
+fn main() {
     println!("hello, world")
 }

@@ -1,13 +1,13 @@
 // * RECURSION :
 
-            // ? Recursion is when a functtion call it self.....
+//             ? Recursion is when a functtion call it self.....
 
-            // ? each recursion represents  a seperate ,independent execution of the function .. the caller remains in a pending state..
+//             ? each recursion represents  a seperate ,independent execution of the function .. the caller remains in a pending state..
 
-            // * BASE CASE :
-                        // ? A base case is the condition that stops the recursion..
+//             * BASE CASE :
+//                         ? A base case is the condition that stops the recursion..
 
-                        // ? the BASE CASE involves some conditional that indicates that the end has been reached...
+//                         ? the BASE CASE involves some conditional that indicates that the end has been reached...
 
 fn conter_count(x:i32){
     if x== 0 {
