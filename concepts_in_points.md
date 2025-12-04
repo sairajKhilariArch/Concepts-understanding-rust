@@ -1,4 +1,4 @@
-# Key Terms of RUST 🦀𜱑🫠
+# Key Terms of RUST 🦀𜱑i🫠
 
 ### Binary application/package
 
