@@ -1,7 +1,7 @@
 // * OWNERSHIP :
 // ? Rust introduces a nes paradigm : OWNERSHIP ....
 // ?Ownership is set of rules on hoe Rust manages your computers memory
-// ? the rust compiler does not compile the program if an ownership rule is voilated...
+// ? the rust compiler does not compile the program if an ownership rule is violated...
 // ? Best of all workers : the speed of a languages like c but less room for errors ...
 
 // * What is Ownership ??
@@ -16,9 +16,9 @@
 
 // a tuple and array own their values......
 
-// ? the purpose of the ownership is to assign responsiblity for deallocating memory (primarily heap memory)
+// ? the purpose of the ownership is to assign responsibility for deallocating memory (primarily heap memory)
 
-// ? OWNERSHIP is a compiler features for reading for reducing duplicate heap data and cleaning up heap data that isno longer needed
+// ? OWNERSHIP is a compiler features for reading for reducing duplicate heap data and cleaning up heap data that ino longer needed
 
 // * The STACK amd HEAP
 // ? The STACK and heap are two different parts/region of the computer's memory...
@@ -30,21 +30,21 @@
 // ?the technical terminology for adding data is pushing onto the stack ..
 // ? the technical terminology for removing data is popping off the stack...
 
-// ? all stack data has a fixed ,consistent siixe is known at compile time..
-// ? Data type like integers,floating-points,Blooleans,Characters, and arrays have a fixed size,Rust Stores them on the stack at runtime
+// ? all stack data has a fixed ,consistent size is known at compile time..
+// ? Data type like integers,floating-points,booleans,Characters, and arrays have a fixed size,Rust Stores them on the stack at runtime
 // ? The pieces of data on the stack will not grow or shrink in size as the program runs...
 
 // * Heap:
 // ? the heap is a large area  of storage space. think  of it like a warehouse ...
-// ? The heap is for data whoose size is not known  at compiler time (user input ,a file's contents,etc..).
+// ? The heap is for data whose size is not known  at compiler time (user input ,a file's contents,etc..).
 // ? When the Rust program  needs dynamic space , it requests it from  the heap .a program called the memory allocator finds an empty spot that is large enough to store the data....
 
 // ? Allocating on the heap is slower than pushing to the stack . the memory allocator has to spend time searching for an open spot large enough to fit the data .....
 // ? accessing data is faster on the stack than the heap as well . with a heap , the program has to follow the pointer to find the memory address..
 // ?A stack stores the data in sequence ,so there is less "jumping around " from point to point.
 
-// * Refrences:
-// ? the memory allocator returns a refrence , which is an address..
-// ? the refrence points to the memory address of the data
-// ? think of a parking  lot giving  you a refrence (spot"H25") when they park your car..
-// ? we can store a refrence  in a variable in  a rust program . Refrences have a fixed  size, so rust stores them on the stack...
+// * references:
+// ? the memory allocator returns a reference , which is an address..
+// ? the reference points to the memory address of the data
+// ? think of a parking  lot giving  you a reference (spot"H25") when they park your car..
+// ? we can store a reference  in a variable in  a rust program . references have a fixed  size, so rust stores them on the stack...
