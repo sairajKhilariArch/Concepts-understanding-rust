@@ -8,11 +8,11 @@
 // * The String type 1:
 //                  ? The String type lives on the heap and supports dynamic text . it can grow and shrink in size ...
 //                  ? The String type does not implement the copy trait..
-//                  ? therefore ,ownership moves from one owner to another when we assign a String to another variable or pass it into function..
+//                  ? therefore ,⁡⁣⁣⁢ownership⁡ moves from one owner to another when we assign a String to another variable or pass it into function..
 
 // * The string type 2 :
 //                  ? the clone method creates a duplicates of a value ..
 //                  ? cloning creates a separate ,independent copy of the values ,so ownership does not move ...
-//                  ? The drop function invalidates a name and dellocates the corrosponding heap memory ...
-//                  ? Rust calls drop automatically at the end of the scope ..
+//                  ? The 𝗱𝗿𝗼𝗽 function invalidates a name and dellocates the corrosponding heap memory ...
+//                  ? Rust calls 𝗱𝗿𝗼𝗽 automatically at the end of the scope ..
 
