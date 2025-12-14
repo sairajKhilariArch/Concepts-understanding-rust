@@ -10,7 +10,7 @@
 //                 ? the technical terminology for removing data is popping off the stack...
 
 //                 ? all stack data has a fixed ,consistent size is known at compile time..
-//                 & Data type like integers,floating-points,booleans,Characters, and arrays have a fixed size,Rust Stores them on the stack at runtime
+//                 ? Data type like integers,floating-points,booleans,Characters, and arrays have a fixed size,Rust Stores them on the stack at runtime
 //                 ? The pieces of data on the stack will not grow or shrink in size as the program runs...
 
 // * Heap:
