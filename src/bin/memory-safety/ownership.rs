@@ -22,7 +22,7 @@
 
 
 
-// * Basics of Owndership:
+// * Basics of ownership:
 //                 ? A scope is the boundary within a program where a name is valid..
 //                 ? A scope ends when a block concludes .A block is a region of code created by pair of curly braces ...
 //                 ? The owners cleans up its data when its name goes out of scope...
