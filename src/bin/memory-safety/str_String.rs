@@ -11,7 +11,7 @@
 //                  ? therefore ,⁡⁣⁣⁢ownership⁡ moves from one owner to another when we assign a String to another variable or pass it into function..
 
 // * The string type 2 :
-//                  ? the clone method creates a duplicates of a value ..
+//                  ? the ⁡⁣⁣⁢clone⁡ method creates a duplicates of a value ..
 //                  ? cloning creates a separate ,independent copy of the values ,so ownership does not move ...
 //                  ? The drop function invalidates a name and deallocates the corresponding heap memory ...
 //                  ? Rust calls drop automatically at the end of the scope ..
