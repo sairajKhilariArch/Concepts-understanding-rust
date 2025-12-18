@@ -16,3 +16,17 @@
 //                  ? The 𝗱𝗿𝗼𝗽 function invalidates a name and dellocates the corrosponding heap memory ...
 //                  ? Rust calls 𝗱𝗿𝗼𝗽 automatically at the end of the scope ..
 
+//  				? each english char contains 1 bytes as space in string... but
+//  				? where as if we chosse a different character like emojis or a different language  character it will take as per the charater requires but for english character they are as per ascii so they take 1 bytes as shown in example....
+
+
+
+
+
+fn main() {
+    let one = "abcd😊😂🤣❤😍 ";
+    let two = & one[0..23]; 
+    let three = one.len();  
+    println!("{three}"); // 24
+
+}
