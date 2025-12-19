@@ -37,8 +37,8 @@ fn main(){
     println!("name of the coffee is {0}",latte.name); // ^ name of the coffee is latte 
 
 
-    // ---------------------------------------------------------------------
-
+    // !-------------------------------------------------------------------
+    // & this is a mutable instance of the coffee struct
     let mut beverages = Coffee{
         name:String::from("pizza"),
         is_hot:true,
@@ -50,4 +50,9 @@ fn main(){
     beverages.prise = 250.0;
 
     println!("{0},{1},{2}",beverages.name,beverages.is_hot,beverages.prise)  // ^ Panner_capsicum_pizza,false,250
+
+    //!-------------------------------------------------------------------
+
+    
+
 }
