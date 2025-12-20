@@ -1,7 +1,21 @@
 [package]
 name = "Concepts-understanding-rust"
 version = "0.1.0"
-edition = "2024"
-default-run = "Concepts-understanding-rust"
+edition = "2021"
 
-[dependencies]
+# [dependencies]
+# android_activity = { version = "0.5", features = ["native-activity"] }
+
+# [lib]
+# crate-type = ["cdylib"]
+
+# [package.metadata.android]
+# package = "com.example.conceptsrust"
+# build_targets = ["aarch64-linux-android", "armv7-linux-androideabi"]
+
+# [package.metadata.android.sdk]
+# min_sdk_version = 23
+# target_sdk_version = 30
+
+# [package.metadata.android.application]
+# label = "Concepts Rust"
