@@ -1,6 +1,6 @@
 // * Struct:
 //              ? A Struct (structure) is a container to store its related data...
-//              ?rule (community): A struct name first letter should be a capitalized one 
+//              ?rule (community): A struct name first char should be a capitalized one 
 
 //          
 

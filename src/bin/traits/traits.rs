@@ -1,8 +1,8 @@
 
 // * TRAITS:
             // ? Traits are like a CONTRACT if any one implement them 
-            // ?then they have to fill the given methodes with (require code) 
-            // ?but if it is already written((require code)) in trait then you do't have to specify  if you dont want to 
+            // ?then they have to fill the given methods with (require code) 
+            // ?but if it is already written((require code)) in trait then you do't have to specify  if you don't want to 
             
             // ! their are built in traits also like (debug , copy , clone ,etc...)
 
@@ -36,8 +36,8 @@ fn main() {
 
 
 
-// ? traits establish consistency between types;methods that represent the same behaviour have the dame name
-// ? when a type opts in to honoring a trait's requiements , we say the type implements the tratis.
+// ? traits establish consistency between types;methods that represent the same behavior have the dame name
+// ? when a type opts in to honoring a trait's requirements , we say the type implements the traits.
 // ? types can vary in their implementation but still implement the trait.
 
 // ? types can vary in their implementation but still implement the same trait...
@@ -46,11 +46,11 @@ fn main() {
 
 // ? A trait can  implement multiple  traits there are hundreds of traits available in rust .
 
-// ? A trait is called  an interface or protocal  in other languages...
+// ? A trait is called  an interface or protocol  in other languages...
 
 // ? eg  a built in traits such as DISPLAY trait
 
 
 
 
-// & SUMMERY :  traits are like contracts which staits that if you implement them then they will provide you with certain things as the output is define but not the input  .....
+// & SUMMERY :  traits are like contracts which taints that if you implement them then they will provide you with certain things as the output is define but not the input  .....
