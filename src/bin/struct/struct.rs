@@ -10,6 +10,10 @@
 //                  ? unit field struct
 
 
+//              ! debug trait is not implemented to the struct from get go (not given to rust y the rust developer)
+//                  & to impl the debug trait to the Struct following command is used (debug trait: developer printing on console)
+//                      ^ 
+
 // * Instance:
 //              ? An instance is concrete value made from type(struct)
 //              ? to access the instance of the coffee 
@@ -19,6 +23,7 @@
 
 
 
+#[derive(Debug)]  // debug trait called manually
 // & coffee is a struct 
 struct Coffee{
     name : String,
@@ -49,10 +54,21 @@ fn main(){
     beverages.is_hot = false;
     beverages.prise = 250.0;
 
-    println!("{0},{1},{2}",beverages.name,beverages.is_hot,beverages.prise)  // ^ Panner_capsicum_pizza,false,250
+    println!("{0},{1},{2}",beverages.name,beverages.is_hot,beverages.prise);  // ^ Panner_capsicum_pizza,false,250
 
-    //!-------------------------------------------------------------------
+    // !-------------------------------------------------------------------
+    
+    // & debug trait print  manually implemented
+    println!("{:?}",beverages);  // ^ Coffee { name: "panner_capsicum_pizza", prise: 250.0, is_hot: false }
+    
+    // & debug trait pretty print
+    println!("{:#?}",beverages); // ^ Coffee {
+                                 // ^    name: "panner_capsicum_pizza",
+                                 // ^    prise: 250.0,
+                                 // ^    is_hot: false,
+                                 // ^}
 
+    // !-------------------------------------------------------------------
     
 
 }
