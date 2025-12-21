@@ -23,6 +23,26 @@
 
 
 
+
+//              ! Rules for the methods and arguments:
+//                      & 1. IMMUTABLE struct value (self parameter takes ownership)
+//                      & 2. MUTABLE struct value  (self parameter takes ownership, has permission to mutate )
+//                      & 3. IMMUTABLE refrence to take struct instance (no ownership is moved)
+//                      & 4. MUTABLE reference to the struct instance (no ownership is moved has permission to mutate)
+
+
+// * Associated function:
+//              ? Associated function are function which are attached/related to type.....
+
+
+// * Constructer Function:
+//              ? Constructer function is a function that return a new instance of a type.....
+
+
+
+
+
+
 #[derive(Debug)]  // debug trait called manually
 // & coffee is a struct 
 struct Coffee{
@@ -38,9 +58,9 @@ fn main(){
         is_hot:true,
         prise:130.0
     };
-
+    
     println!("name of the coffee is {0}",latte.name); // ^ name of the coffee is latte 
-
+    
 
     // !-------------------------------------------------------------------
     // & this is a mutable instance of the coffee struct
@@ -49,13 +69,13 @@ fn main(){
         is_hot:true,
         prise:100.0
     };
-
+    
     beverages.name = String::from("panner_capsicum_pizza");
     beverages.is_hot = false;
     beverages.prise = 250.0;
-
+    
     println!("{0},{1},{2}",beverages.name,beverages.is_hot,beverages.prise);  // ^ Panner_capsicum_pizza,false,250
-
+    
     // !-------------------------------------------------------------------
     
     // & debug trait print  manually implemented
@@ -67,8 +87,11 @@ fn main(){
                                  // ^    prise: 250.0,
                                  // ^    is_hot: false,
                                  // ^}
-
+    
     // !-------------------------------------------------------------------
     
 
+
+
+    
 }
