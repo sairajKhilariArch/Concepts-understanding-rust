@@ -2,7 +2,8 @@
 //              ? A Struct (structure) is a container to store its related data...
 //              ?rule (community): A struct name first char should be a capitalized one 
 
-//          
+//              ? A struct can implement multiple impl block for same type(struct) .....
+//                  ? it will merge the multiple impl block into one block of same type(struct)....
 
 //              ? Rust has a three kind of struct :
 //                  ? Named field struct 
@@ -33,10 +34,11 @@
 
 // * Associated function:
 //              ? Associated function are function which are attached/related to type.....
+//              ? Associated function don't take self as first perimeter(argument)...
 
 
-// * Constructer Function:
-//              ? Constructer function is a function that return a new instance of a type.....
+// * Constructor Function:
+//              ? Constructor function is a function that return a new instance of a type.....
 
 
 

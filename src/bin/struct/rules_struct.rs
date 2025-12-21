@@ -9,6 +9,12 @@
 
 
 
+//                      & Associated function: 
+//                          ? it is like to creake a new function (like init in python....)
+
+
+//                      ? multiple impl block for same block
+
 #[derive(Debug)] 
 
 struct Emp{
@@ -17,6 +23,16 @@ struct Emp{
     designation: String,
 }
 
+
+impl Emp{
+    fn new(name:String,age:u32,designation:String)->Self{
+        Self{
+            name,
+            age,
+            designation,
+        }
+    }
+}
 
 impl Emp{
     
@@ -61,5 +77,8 @@ fn main(){
 
     // emp1.change_designation(String::from("rust"));
 
+    let emp2 = Emp::new(String::from("soham"),30, String::from("developer"));
+
+    emp2.details_with_ref();
 
 } 
