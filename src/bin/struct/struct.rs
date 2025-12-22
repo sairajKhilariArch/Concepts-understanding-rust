@@ -41,6 +41,12 @@
 //              ? Constructor function is a function that return a new instance of a type.....
 
 
+// * Design pattern :
+//              ?  A Design pattern is a recommended way to write structure code to solve specific problem 
+
+
+
+
 
 
 
