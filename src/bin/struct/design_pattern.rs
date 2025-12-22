@@ -32,15 +32,15 @@ impl Emp{
         println!("{:#?}",self);
     }
     
-    fn change_designation(&mut self,cha:String)-> &mut self {
+    fn change_designation(&mut self,cha:String)-> &mut Self {
         self.designation = cha;
         println!("designation has change");
         println!("{}",self.designation);
         self
     }
     
-    fn change_age(&mut self,age:String)-> &mut Self {
-        self.age = age;
+    fn change_age(&mut self,ag:u32)-> &mut Self {
+        self.age = ag;
         println!("age has change");
         println!("{}",self.age);
         self
@@ -70,4 +70,5 @@ fn main(){
         .change_age(26)
         .change_name(String::from("Shadow"));
 
+    emp1.details()
 } 
