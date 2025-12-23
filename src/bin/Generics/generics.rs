@@ -1,0 +1,3 @@
+// * Generics:
+//              ? A Generic is a type argument ..is's a placeholder for future type...
+
