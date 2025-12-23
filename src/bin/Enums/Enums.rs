@@ -16,22 +16,7 @@
 
 
 
-#[derive(Debug)]
-enum PaymentMethodType{
-    CreditCard(credentials),
-    DebitCard(credentials),
-    PayPal(credentials),
-    GooglePay(credentials),
-    Cred(credentials),
 
-}
-#[derive(Debug)]
-struct credentials{
-    Name: String,
-    AccountNo: u64,
-    Email:String,
-    Password:String,
-}
 
 
 #[derive(Debug)]
@@ -54,6 +39,28 @@ struct Card {
     number: CardNumber,
     suit: CardType,
 }
+
+
+
+#[derive(Debug)]
+enum PaymentMethodType{
+    CreditCard(credentials),
+    DebitCard(credentials),
+    PayPal(credentials),
+    GooglePay(credentials),
+    Cred(credentials),
+
+}
+#[derive(Debug)]
+struct credentials{
+    Name: String,
+    AccountNo: u64,
+    Email:String,
+    Password:String,
+}
+
+
+
 fn main()  {
 
     let first_card = CardType::Harts;
