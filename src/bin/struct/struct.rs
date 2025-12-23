@@ -30,7 +30,7 @@
 //              ! Rules for the methods and arguments:
 //                      & 1. IMMUTABLE struct value (self parameter takes ownership)
 //                      & 2. MUTABLE struct value  (self parameter takes ownership, has permission to mutate )
-//                      & 3. IMMUTABLE refrence to take struct instance (no ownership is moved)
+//                      & 3. IMMUTABLE reference to take struct instance (no ownership is moved)
 //                      & 4. MUTABLE reference to the struct instance (no ownership is moved has permission to mutate)
 
 
@@ -45,7 +45,6 @@
 
 // * Design pattern :
 //              ?  A Design pattern is a recommended way to write structure code to solve specific problem 
-
 
 
 

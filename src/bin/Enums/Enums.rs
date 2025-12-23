@@ -8,11 +8,33 @@
 
 
 
+// * Struct variant :
+//              ? A struct variant  Stores associated data fields rather than by position.  each piece of data has an associated name....
+//              ? struct as a variant for the enum type
+
+
 
 
 
 #[derive(Debug)]
+enum PaymentMethodType{
+    CreditCard(credentials),
+    DebitCard(credentials),
+    PayPal(credentials),
+    GooglePay(credentials),
+    Cred(credentials),
 
+}
+#[derive(Debug)]
+struct credentials{
+    Name: String,
+    AccountNo: u64,
+    Email:String,
+    Password:String,
+}
+
+
+#[derive(Debug)]
 enum CardType{
     Harts,
     Spade,
@@ -48,7 +70,17 @@ fn main()  {
         suit:CardType::Clubs
     };
 
-    println!("{:#?}",fourth_card);
+    // println!("{:#?}",fourth_card);
 
+    let customer01_cre = credentials{
+        Name: String::from("sairaj"),
+        AccountNo:098765432123,
+        Email:String::from("cus01@mail.com"),
+        Password:String::from("qwertyuiop"),
+    };
+
+    let customer01 = PaymentMethodType::Cred(customer01_cre);
+
+    println!("{:#?}",customer01);
 
 }
