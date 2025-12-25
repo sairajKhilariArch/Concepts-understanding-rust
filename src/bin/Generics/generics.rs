@@ -15,7 +15,7 @@ enum Cheesesteak<T>{
 
 fn main()  {
     let mushroom =Cheesesteak::Topping("mushroom");
-    let onions = Cheesesteak::Topping("onions");
+    let onions = Cheesesteak::Topping(4);
     println!("{:?}",mushroom);
     println!("{:?}",onions);
 }
