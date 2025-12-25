@@ -9,7 +9,12 @@
 
 //              ? By default. custom enums do not implement the copy trait. ownership rules apply...
 
-
+//              ^ this is how you show the variant in the enum :
+//                  ! | Type           | Syntax                 | Purpose                                   |
+//                  ? | -------------- | ---------------------- | ----------------------------------------- |
+//                  & | Unit-like      | Free                   | No associated data                        |
+//                  & | Tuple variant  | Basic(f64, u32)        | Anonymous positional fields (like tuples) |
+//                  & | Struct variant | Premium { tier: Tier } | Named fields (like structs)               |
 
 // * Tuple Variant :
 //              ? A variant can store associated data..
