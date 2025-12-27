@@ -1,4 +1,4 @@
-// * OPtion Enum:
+// * Option Enum:
 //              ? THe option enum models a scenario where a type could be a valid where could be a valid value or nothing at all .....
 
 
@@ -8,17 +8,30 @@
 // & Option::Some(T):
 //              ? Represents a present value...
 
+
+
+
 // * Result Enum:
-//              ? The Result enum 
+//              ? The Result enum models an evaluation that can produce either a success or an error ...
+//              ? The OK variant indicates a success.it stores an associated piece of data of generics type T...
+//              ? The Err variant indicates an error .it stores an associated piece of data of generics type E.
+
+//              ?   pun enum Result<T,E>{ok(T),Err(E),}
+
+// * Rust prelude:
+//              ? The Rust prelude is a collection of named constructs that are available automatically in every program....
+
 
 // * get :
 //              ? get is a method used to retrieve the index position data from an array any other type of lists...
 //              ? But also it is used when a user want it dynamically not by in build developer  .....
 
+
 // * Unwrap:
 //              ? The unwrap method attempts to extract the associated data out of the Some variant...
 //              ? When the data is get from the get method operator unwrap is used to get it out of the packing and give it to the variable.
 //              ? As it is got by the some variant of option enum..
+
 
 // * expect:
 //              ? Expect is same as unwrap but with an additional task which is to 
@@ -47,7 +60,7 @@ fn wrap_unwrap_get(){
     println!("{}",im_marvel_char);  // ^ Iron Man
 
 
-    // ? This is a same process as upper code but insted of the unwrap here expect is used to give an expected error if the unwrap task fails...
+    // ? This is a same process as upper code but instead of the unwrap here expect is used to give an expected error if the unwrap task fails...
     let im2 = marvel_char.get(3);
     let im_marvel_char2 = im2.expect("could'nt unwrap");
     println!("{}",im_marvel_char2); // ^ Hulk
@@ -108,5 +121,7 @@ fn option_for_match(){
 
 
 fn main()  {
+    let hi = true;
+    
 }
 

@@ -3,14 +3,14 @@
 
 //                      & 2. MUTABLE struct value  (self parameter takes ownership, has permission to mutate ) ==> mut self
 
-//                      & 3. IMMUTABLE refrence to take struct instance (no ownership is moved)  ==> &self
+//                      & 3. IMMUTABLE reference to take struct instance (no ownership is moved)  ==> &self
 
 //                      & 4. MUTABLE reference to the struct instance (no ownership is moved has permission to mutate)  ==> &mut self
 
 
 
 //                      & Associated function: 
-//                          ? it is like to creake a new function (like init in python....)
+//                          ? it is like to crake a new function (like init in python....)
 
 
 //                      ? multiple impl block for same block
@@ -48,7 +48,7 @@ impl Emp{
         println!("{}",self.designation);
     }
     
-    // & 3. IMMUTABLE refrence to take struct instance (no ownership is moved)
+    // & 3. IMMUTABLE reference to take struct instance (no ownership is moved)
     fn details_with_ref(&self){
         println!("{:#?}",self);
     }
