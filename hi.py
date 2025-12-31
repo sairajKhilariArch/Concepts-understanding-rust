@@ -1,29 +1,20 @@
-
-
-#? Rules can be added here as most of the configuration are dynamic
-
-# // █░█░█ █ █▄░█ █▀▄ █▀█ █░█░█   █▀█ █░█ █░░ █▀▀ █▀
-# // ▀▄▀▄▀ █ █░▀█ █▄▀ █▄█ ▀▄▀▄▀   █▀▄ █▄█ █▄▄ ██▄ ▄█
-
-# See https://wiki.hyprland.org/Configuring/Window-Rules/
-
 # Sizes for floating popups
-windowrulev2 = size <85% <95%,floating:1
+windowrulev2 = size 85% 95%,floating
 windowrulev2 = float,tag:common-popups
-windowrulev2 = size <60% <90%,tag:common-popups
+windowrulev2 = size 60% 90%,tag:common-popups
 
 # Fix file chooser dialogs opening off-screen
 windowrulev2 = float,tag:portal-dialogs
 windowrulev2 = center,tag:portal-dialogs
 
-# Only add the Core applications here
+# Core applications
 windowrulev2 = float,class:^(com.gabm.satty)$
 windowrulev2 = float,class:^(org.kde.dolphin)$,title:^(Progress Dialog — Dolphin)$
 windowrulev2 = float,class:^(org.kde.dolphin)$,title:^(Copying — Dolphin)$
 windowrulev2 = float,title:^(About Mozilla Firefox)$
-windowrulev2 = float,class:^(.*)$,initialTitle:^(top)$
-windowrulev2 = float,class:^(.*)$,initialTitle:^(btop)$
-windowrulev2 = float,class:^(.*)$,initialTitle:^(htop)$
+windowrulev2 = float,title:^(top)$
+windowrulev2 = float,title:^(btop)$
+windowrulev2 = float,title:^(htop)$
 windowrulev2 = float,class:^(vlc)$
 windowrulev2 = float,class:^(kvantummanager)$
 windowrulev2 = float,class:^(qt5ct)$
@@ -38,31 +29,27 @@ windowrulev2 = float,class:^(nm-connection-editor)$
 windowrulev2 = float,class:^(org.kde.polkit-kde-authentication-agent-1)$
 
 # common popups
-windowrulev2 = tag +common-popups,initialTitle:^(Open File)$
-windowrulev2 = tag +common-popups,title:^(Choose Files)$
-windowrulev2 = tag +common-popups,title:^(Save As)$
-windowrulev2 = tag +common-popups,title:^(Confirm to replace files)$
-windowrulev2 = tag +common-popups,title:^(File Operation Progress)$
-windowrulev2 = tag +common-popups,class:^([Xx]dg-desktop-portal-gtk)$
-windowrulev2 = tag +common-popups,title:^(Open)$
-windowrulev2 = tag +common-popups,title:^(Authentication Required)$
-windowrulev2 = tag +common-popups,title:^(Add Folder to Workspace)$
-windowrulev2 = tag +common-popups,title:^(File Upload)(.*)$
-windowrulev2 = tag +common-popups,title:^(Choose wallpaper)(.*)$
-windowrulev2 = tag +common-popups,title:^(Library)(.*)$
-windowrulev2 = tag +common-popups,class:^(.*dialog.*)$
-windowrulev2 = tag +common-popups,title:^(.*dialog.*)$
+windowrulev2 = tag common-popups,title:^(Open File)$
+windowrulev2 = tag common-popups,title:^(Choose Files)$
+windowrulev2 = tag common-popups,title:^(Save As)$
+windowrulev2 = tag common-popups,title:^(Confirm to replace files)$
+windowrulev2 = tag common-popups,title:^(File Operation Progress)$
+windowrulev2 = tag common-popups,class:^([Xx]dg-desktop-portal-gtk)$
+windowrulev2 = tag common-popups,title:^(Open)$
+windowrulev2 = tag common-popups,title:^(Authentication Required)$
+windowrulev2 = tag common-popups,title:^(Add Folder to Workspace)$
+windowrulev2 = tag common-popups,title:^(File Upload).*$ 
+windowrulev2 = tag common-popups,title:^(Choose wallpaper).*$ 
+windowrulev2 = tag common-popups,title:^(Library).*$ 
+windowrulev2 = tag common-popups,class:^(.*dialog.*)$
+windowrulev2 = tag common-popups,title:^(.*dialog.*)$
 
 # portal-dialogs
-windowrulev2 = tag +portal-dialogs,class:^(org.freedesktop.impl.portal.desktop.hyprland)$
-windowrulev2 = tag +portal-dialogs,class:^(org.freedesktop.impl.portal.desktop.gtk)$
-windowrulev2 = tag +portal-dialogs,class:^([Xx]dg-desktop-portal-gtk)$
+windowrulev2 = tag portal-dialogs,class:^(org.freedesktop.impl.portal.desktop.hyprland)$
+windowrulev2 = tag portal-dialogs,class:^(org.freedesktop.impl.portal.desktop.gtk)$
+windowrulev2 = tag portal-dialogs,class:^([Xx]dg-desktop-portal-gtk)$
 
-
-
-# // █░░ ▄▀█ █▄█ █▀▀ █▀█   █▀█ █░█ █░░ █▀▀ █▀
-# // █▄▄ █▀█ ░█░ ██▄ █▀▄   █▀▄ █▄█ █▄▄ ██▄ ▄█
-
+# Layer rules
 layerrulev2 = blur,rofi
 layerrulev2 = ignorezero,rofi
 layerrulev2 = blur,notifications
