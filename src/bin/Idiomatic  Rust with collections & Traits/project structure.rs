@@ -43,7 +43,7 @@
 // *  Ways to declare module:
 
 //              ? 1st:in the main file
-//                  ? you can declare it in the main file with mod infront of that module name with the module contents...
+//                  ? you can declare it in the main file with mod in front of that module name with the module contents...
 //                          ^ eg: mod hello{"here is the all code for the module"}
 
 //              ? 2nd: separate file same folder /across multiple files
