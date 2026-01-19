@@ -1,7 +1,7 @@
 // * HASHMAP:
 //              ? A hash-map is a collection type that consists of a key value pairs.
 //              ? KEYS and VALUES should be of same type and known which type are type before compiling..
-//              ? Hasmap lives on the heap data as it can grow
+//              ? hashmap lives on the heap data as it can grow
 //                  ^let mut menu: HashMap<String, f64> = HashMap::new();
 
 //              ? Keys should always be  different  but same type
@@ -13,13 +13,13 @@
 //                  ^ menu.insert(String::from("WATER"), 50.0);
 
 // * from method :
-//              ? from method is giving the data when declared with help of from insted of new .....
+//              ? from method is giving the data when declared with help of from instead of new .....
 //              ?
 
 // * remove method:
 //              ? The remove method uses key to delete the key value pair
-//              ? removes gives the valuse as the option
-//              ? Option ? becs,their is a posibility that that key will not be present in the hasmap so it gives SOME varient as a value if present and NONE vareirnt if the value is not present
+//              ? removes gives the values as the option
+//              ? Option ? because,their is a possibility that that key will not be present in the hashmap so it gives SOME variant as a value if present and NONE variant if the value is not present
 
 // * get method : .get()
 //              ? Get method get the reference of the keys and output the reference of the value  of the key....
@@ -31,20 +31,12 @@
 // * insert method: .insert(K,V)
 //              ? it inserts the kay value and if the key is present the value is updated to new value
 
-
 // * entry or_insert method :
-//              ? entry is a method used to put a key in a hashmap if the kay is present it will drop 
+//              ? entry is a method used to put a key in a hashmap if the kay is present it will drop
 
 //              ? or_insert is a combine method used with the entry method which holds the value if a key is not present it will insert the value in that entry/ key pair ..
 
-//              ? if a value is alrady present it will drop ....
-
-
-
-
-
-
-
+//              ? if a value is already present it will drop ....
 
 use std::collections::HashMap;
 
@@ -66,7 +58,6 @@ fn main() {
     get_method();
     insert_method();
     entry_orinsert_method();
-
 }
 
 fn from_method_hashmap() {
@@ -126,8 +117,7 @@ fn get_method() {
     println!("{value1:?}"); // ^ "2"
 }
 
-
-fn insert_method(){
+fn insert_method() {
     let mut hi = HashMap::new();
     hi.insert("hello", 1);
     println!("{:?}", hi.get("hello")); // ^ Some(1)
@@ -137,9 +127,7 @@ fn insert_method(){
     println!("{:?}", hi.get("hello")); // ^ Some(3)
 }
 
-
-fn entry_orinsert_method()  {
-
+fn entry_orinsert_method() {
     let mut hi = HashMap::new();
     hi.entry("hello");
     println!("{:?}", hi); // ^ {}
@@ -153,5 +141,3 @@ fn entry_orinsert_method()  {
     hi.entry("hello").or_insert(3);
     println!("{:?}", hi); // ^ {"hello": 2}
 }
-
-
