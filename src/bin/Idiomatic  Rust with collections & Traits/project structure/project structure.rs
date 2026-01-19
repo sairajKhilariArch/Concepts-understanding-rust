@@ -90,7 +90,7 @@
 // ^                 };
 
 // * Glob operator: *
-//              ? Glob operator is used to import all the features and modules  from the that peticular library...
+//              ? Glob operator is used to import all the features and modules  from the that particular library...
 //              ^ Eg: std::*;
 //              ^     std::io::*;
 
@@ -99,7 +99,7 @@
 //              ? Any thing which we write in this comment section will be made for documentation
 //              & commands
 //              ^ cargo doc --no-deps --open
-//              ? --no-deps : to not add the other dependences
+//              ? --no-deps : to not add the other dependence
 //              ? --open : to auto open it after making the documentation....
 
 

@@ -1,4 +1,4 @@
-/// hi this is a documantetation..
+/// hi this is a documentation..
 
 // mod inventory;
 // mod orders;
