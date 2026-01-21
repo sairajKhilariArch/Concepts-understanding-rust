@@ -12,6 +12,17 @@
 //                  ^ menu.insert(String::from("RICE"), 29.99);
 //                  ^ menu.insert(String::from("WATER"), 50.0);
 
+//              ? A hash map establishes mappings/connections between two pieces of data .....
+
+//              ? The length of a hashmap is a count of its key value pairs.
+
+// * creating a HashMap : 
+//              ? The std::collections submodule contains  the HashMap type..
+//              ? The new constructor function instantiates an empty hashMap
+//              ? If the code does not add a key-value pair we must provide a type declration...
+//              ? The HashMap defiens 2 generic types : K and V. the keys will be of type K and the values of typ V .....
+
+
 // * from method :
 //              ? from method is giving the data when declared with help of from instead of new .....
 //              ?
