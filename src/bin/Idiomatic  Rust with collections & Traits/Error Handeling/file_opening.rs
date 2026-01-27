@@ -6,6 +6,8 @@
 //              ~ let file = File::open("hi/story.txt");
 //              ~ println!("{file:?}");
 
+// ! fs::read_to_string method is different from the File:::read_to_string method
+
 // * Asking the user for input: and reading the file
 
 // ?            with the functional way
@@ -85,6 +87,8 @@ fn read_file() -> Result<String, io::Error> {
 }
 
 // * using the ? operator insted of match for return :
+
+
 // ~
 // ~ use std::fs::File;
 // ~ use std::io::{self, stdin, Read};
@@ -115,3 +119,27 @@ fn read_file() -> Result<String, io::Error> {
 // ~
 // ~     Ok(file_lines)
 // ~ }
+
+
+// * with fs::read_to_string method
+
+use std::fs;
+use std::io::{self, stdin};
+fn main() {
+    match read_file() {
+        Ok(content) => println!("File contents:\n{}", content),
+        Err(e) => eprintln!("Error reading file: {}", e),
+    }
+}
+
+fn read_file() -> Result<String, io::Error> {
+    println!("Please give me the name of the file you want to read:");
+
+    let mut input = String::new();
+    stdin().read_line(&mut input)?;
+
+    fs::read_to_string(input.trim())
+}
+
+
+
