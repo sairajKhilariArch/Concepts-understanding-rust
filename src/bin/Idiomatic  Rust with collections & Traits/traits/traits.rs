@@ -31,12 +31,15 @@
 ?           A trait Bound requires that a generic type implement a specific trait....
 
 * Trait Object : 
-?           A Trait object is an instances of the type that implements a perticulat trait whose methods will be accrssed a run time using a features called dinaminc dispatch .....
+?           A Trait object is an instances of the type that implements a particular trait whose methods will be accessed a run time using a features called dynamic dispatch .....
 
 * Constant :
 ?           Constant is a name for a fixed , immutable value.....
-* Associated constant : 
+* Associated constant :
 ?           An associated constant is a constant declare within the trait ..
+
+* Getter Method :
+?           A getter method is type of method that retrieves apace of data .it  'gets' a piece of state.....
 
 
 */
@@ -49,7 +52,7 @@ use std::{fmt::Debug,collections, collections::HashMap};
 
 trait Accommodations {
     // fn get_description(&self) -> String {
-    //     format!("A wondeful place to stay")
+    //     format!("A wonderful place to stay")
     // }
     fn book(&mut self, name: &str, night: u32);
 }
@@ -79,7 +82,7 @@ impl Accommodations for Hotel {
     // }
 }
 
-impl Discription for Hotel {
+impl description for Hotel {
     fn get_description(&self) -> String {
         format!(" plz enjoy  {}'s Room", self.name)
     }
@@ -102,16 +105,16 @@ impl AirBnb {
 
 impl Accommodations for AirBnb {
     // fn get_description(&self) -> String {
-    //     format!(" plz enjoy  {}'s appartment", self.host)
+    //     format!(" plz enjoy  {}'s apartment", self.host)
     // }
 
     fn book(&mut self, name: &str, night: u32) {
         self.guests.push((name.to_string(), night))
     }
 }
-impl Discription for AirBnb {
+impl description for AirBnb {
     fn get_description(&self) -> String {
-        format!(" plz enjoy  {}'s appartment", self.host)
+        format!(" plz enjoy  {}'s apartment", self.host)
     }
 }
 
@@ -121,7 +124,7 @@ impl Discription for AirBnb {
 // }
 
 // ? multiple trait impl in the fn
-// fn book_for_one_night(entity: &mut (impl Accommodations + Discription), name: &str) {
+// fn book_for_one_night(entity: &mut (impl Accommodations + description), name: &str) {
 //     entity.book(name, 1);
 // }
 
@@ -132,7 +135,7 @@ impl Discription for AirBnb {
 // }
 
 // ? multiple trait impl in a fn with generics
-fn book_for_one_night<T: Accommodations + Discription>(entity: &mut T, name: &str) {
+fn book_for_one_night<T: Accommodations + description>(entity: &mut T, name: &str) {
     entity.book(name, 1);
 }
 
@@ -149,7 +152,7 @@ fn book_for_one_night<T: Accommodations + Discription>(entity: &mut T, name: &st
 
 fn mix_and_match<T, U>(first: &mut T, second: &mut U, guest: String)
 where
-    T: Accommodations + Discription,
+    T: Accommodations + description,
     U: Accommodations,
 {
     first.book(&guest, 1);
@@ -157,13 +160,13 @@ where
 }
 
 // * multiple trait bound:
-trait Discription {
+trait description {
     fn get_description(&self) -> String {
-        format!("A wondeful place to stay")
+        format!("A wonderful place to stay")
     }
 }
 
-fn choose_best_place_to_stay() -> impl Accommodations + Discription + Debug {
+fn choose_best_place_to_stay() -> impl Accommodations + description + Debug {
     Hotel::new("Taj hotel")
 }
 
@@ -201,9 +204,9 @@ use std::{collections, collections::HashMap, fmt::Debug, fmt::Display};
 trait Accommodations {
     fn book(&mut self, name: &str, night: u32);
 }
-trait Discription {
+trait description {
     fn get_description(&self) -> String {
-        format!("A wondeful place to stay")
+        format!("A wonderful place to stay")
     }
 }
 // -----------------------------------------------------------
@@ -226,7 +229,7 @@ impl<T> Hotel<T> {
 }
 
 impl<T: Display> Hotel<T> {
-    fn summerize(&self) -> String {
+    fn summarize(&self) -> String {
         format!(" {} : {} ", self.name, self.get_description())
     }
 }
@@ -237,7 +240,7 @@ impl<T> Accommodations for Hotel<T> {
     }
 }
 
-impl<T: Display> Discription for Hotel<T> {
+impl<T: Display> description for Hotel<T> {
     fn get_description(&self) -> String {
         format!(" plz enjoy  {}'s Room", self.name)
     }
@@ -249,10 +252,10 @@ impl<T: Display> Discription for Hotel<T> {
 
 fn main() {
     let mut h1 = Hotel::new("sairajkkk");
-    println!("{}", h1.summerize());
+    println!("{}", h1.summarize());
 
     let h2 = Hotel::new(String::from("sairajkk"));
-    println!("{}", h2.summerize());
+    println!("{}", h2.summarize());
     // let h3 = Hotel::new(vec!["sairaj", "hi"]);
     // println!("{}",h3);
 }
@@ -310,6 +313,53 @@ impl Taxable for bonus {
 
     fn tax_bill(&self) -> f64 {
         &self.b_amount * Self::TAX_RATE
+    }
+}
+
+fn main() {
+    let wer = income { amount: 10000.00 };
+    println!("{:.2}", wer.tax_bill());
+
+    let qwe = bonus { b_amount: 10000.00 };
+    println!("{:.2}", qwe.tax_bill());
+}
+
+*/
+
+// * Getter Method :
+
+/*
+
+trait Taxable {
+    const TAX_RATE: f64 = 0.25;
+
+    fn amount(&self) -> f64;
+
+    fn tax_bill(&self) -> f64 {
+        &self.amount() * Self::TAX_RATE
+    }
+}
+
+#[derive(Debug)]
+struct income {
+    amount: f64,
+}
+
+impl Taxable for income {
+    fn amount(&self) -> f64 {
+        self.amount
+    }
+}
+
+struct bonus {
+    b_amount: f64,
+}
+
+impl Taxable for bonus {
+    const TAX_RATE: f64 = 0.5;
+
+    fn amount(&self) -> f64 {
+        self.b_amount
     }
 }
 
