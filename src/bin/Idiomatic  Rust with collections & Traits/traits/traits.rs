@@ -33,6 +33,12 @@
 * Trait Object : 
 ?           A Trait object is an instances of the type that implements a perticulat trait whose methods will be accrssed a run time using a features called dinaminc dispatch .....
 
+* Constant :
+?           Constant is a name for a fixed , immutable value.....
+* Associated constant : 
+?           An associated constant is a constant declare within the trait ..
+
+
 */
 
 // ! this is a example of the simple trait and how trait bound work
@@ -271,6 +277,48 @@ fn main() {
 
     println!("{:#?}", h1);
     println!("{:#?}", a1);
+}
+
+*/
+
+// * Associated constant
+
+/*
+trait Taxable {
+    const TAX_RATE: f64 = 0.25;
+
+    fn tax_bill(&self) -> f64;
+}
+
+#[derive(Debug)]
+struct income {
+    amount: f64,
+}
+
+impl Taxable for income {
+    fn tax_bill(&self) -> f64 {
+        &self.amount * Self::TAX_RATE
+    }
+}
+
+struct bonus {
+    b_amount: f64,
+}
+
+impl Taxable for bonus {
+    const TAX_RATE: f64 = 0.5;
+
+    fn tax_bill(&self) -> f64 {
+        &self.b_amount * Self::TAX_RATE
+    }
+}
+
+fn main() {
+    let wer = income { amount: 10000.00 };
+    println!("{:.2}", wer.tax_bill());
+
+    let qwe = bonus { b_amount: 10000.00 };
+    println!("{:.2}", qwe.tax_bill());
 }
 
 */
