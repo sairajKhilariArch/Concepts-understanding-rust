@@ -41,6 +41,9 @@
 * Getter Method :
 ?           A getter method is type of method that retrieves apace of data .it  'gets' a piece of state.....
 
+* Setter Method :
+?           A setter method is a method that writes a piece of data ..
+?           its 'sets' a piece of state....
 
 */
 
@@ -369,6 +372,96 @@ fn main() {
 
     let qwe = bonus { b_amount: 10000.00 };
     println!("{:.2}", qwe.tax_bill());
+}
+
+*/
+
+// * Setter Method :
+
+/*
+
+// -----------------------------------------------------------
+// ----------------------------taxable---------------------------
+// -----------------------------------------------------------
+
+trait Taxable {
+    const TAX_RATE: f64 = 0.25;
+
+    fn amount(&mut self) -> f64; //GETTER METHOD
+
+    fn set_amount(&mut self, amount: f64); // setter method
+
+    fn tax_bill(&mut self) -> f64 {
+        &self.amount() * Self::TAX_RATE
+    }
+
+    fn double_amount(&mut self) {
+        let hi = self.amount() * 2.00;
+        self.set_amount(hi);
+    }
+}
+
+// -----------------------------------------------------------
+// ----------------------------income---------------------------
+// -----------------------------------------------------------
+
+#[derive(Debug)]
+struct Income {
+    amount: f64,
+}
+
+impl Taxable for Income {
+    fn amount(&mut self) -> f64 {
+        self.amount
+    }
+    fn set_amount(&mut self, amount: f64) {
+        self.amount = amount;
+    }
+}
+
+// -----------------------------------------------------------
+// ----------------------------bonus---------------------------
+// -----------------------------------------------------------
+
+#[derive(Debug)]
+struct Bonus {
+    b_amount: f64,
+}
+
+impl Taxable for Bonus {
+    const TAX_RATE: f64 = 0.5;
+
+    fn amount(&mut self) -> f64 {
+        self.b_amount
+    }
+
+    fn set_amount(&mut self, amount: f64) {
+        self.b_amount = amount;
+    }
+}
+
+
+// -----------------------------------------------------------
+// ----------------------------MAIN---------------------------
+// -----------------------------------------------------------
+
+
+fn main() {
+    let mut wer = Income { amount: 10000.00 };
+    println!("{:.2}", wer.tax_bill());
+
+    println!("{:?}", wer.amount());
+    println!("{:?}", wer.set_amount(20000.0));
+    println!("{:?}", wer.double_amount());
+    println!("{wer:?}");
+
+    let mut qwe = Bonus { b_amount: 10000.00 };
+    println!("{:.2}", qwe.tax_bill());
+
+    println!("{:?}", qwe.amount());
+    println!("{:?}", qwe.set_amount(12345.0));
+    println!("{:?}", qwe.double_amount());
+    println!("{qwe:?}");
 }
 
 */
