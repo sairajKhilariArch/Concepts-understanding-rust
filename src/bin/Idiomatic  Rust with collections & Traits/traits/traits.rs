@@ -45,6 +45,11 @@
 ?           A setter method is a method that writes a piece of data ..
 ?           its 'sets' a piece of state....
 
+* Supertrait :
+?           A supertrait is a trait from which another trait inherits functionality....
+?           The parent is called the super trait and
+?           The child is called a sub trait... 
+
 */
 
 // ! this is a example of the simple trait and how trait bound work
@@ -462,6 +467,122 @@ fn main() {
     println!("{:?}", qwe.set_amount(12345.0));
     println!("{:?}", qwe.double_amount());
     println!("{qwe:?}");
+}
+
+*/
+
+// * SuperTrait
+
+/*
+// -----------------------------------------------------------------
+// ----------------------------Investment---------------------------
+// -----------------------------------------------------------------
+
+trait Investment {
+    fn amount(&mut self) -> f64; //GETTER METHOD
+
+    fn set_amount(&mut self, amount: f64); // setter method
+
+    fn double_amount(&mut self) {
+        let hi = self.amount() * 2.00;
+        self.set_amount(hi);
+    }
+}
+
+// --------------------------------------------------------------
+// ----------------------------taxable---------------------------
+// --------------------------------------------------------------
+
+trait Taxable: Investment {
+    const TAX_RATE: f64 = 0.25;
+
+    fn tax_bill(&mut self) -> f64 {
+        &self.amount() * Self::TAX_RATE
+    }
+}
+
+// -------------------------------------------------------------
+// ----------------------------income---------------------------
+// -------------------------------------------------------------
+
+#[derive(Debug)]
+struct Income {
+    amount: f64,
+}
+impl Investment for Income {
+    fn amount(&mut self) -> f64 {
+        self.amount
+    }
+    fn set_amount(&mut self, amount: f64) {
+        self.amount = amount;
+    }
+}
+impl Taxable for Income {}
+
+// ------------------------------------------------------------
+// ----------------------------bonus---------------------------
+// ------------------------------------------------------------
+
+#[derive(Debug)]
+struct Bonus {
+    b_amount: f64,
+}
+impl Investment for Bonus {
+    fn amount(&mut self) -> f64 {
+        self.b_amount
+    }
+
+    fn set_amount(&mut self, amount: f64) {
+        self.b_amount = amount;
+    }
+}
+
+impl Taxable for Bonus {
+    const TAX_RATE: f64 = 0.5;
+}
+// ------------------------------------------------------------
+// ----------------------------QualityTime---------------------
+// ------------------------------------------------------------
+#[derive(Debug)]
+struct QualityTime {
+    minutes: f64,
+}
+impl Investment for QualityTime {
+    fn amount(&mut self) -> f64 {
+        self.minutes
+    }
+
+    fn set_amount(&mut self, minutes: f64) {
+        self.minutes = minutes;
+    }
+}
+// -----------------------------------------------------------
+// ----------------------------MAIN---------------------------
+// -----------------------------------------------------------
+
+fn main() {
+    let mut wer = Income { amount: 10000.00 };
+    println!("{:.2}", wer.tax_bill());
+
+    println!("{:?}", wer.amount());
+    println!("{:?}", wer.set_amount(20000.0));
+    println!("{:?}", wer.double_amount());
+    println!("{wer:?}");
+
+    let mut qwe = Bonus { b_amount: 10000.00 };
+    println!("{:.2}", qwe.tax_bill());
+
+    println!("{:?}", qwe.amount());
+    println!("{:?}", qwe.set_amount(12345.0));
+    println!("{:?}", qwe.double_amount());
+    println!("{qwe:?}");
+
+    let mut qaz = QualityTime { minutes: 180.00 };
+
+    println!("{:?}", qaz.amount());
+    println!("{:?}", qaz.set_amount(12345.0));
+    println!("{:?}", qaz.double_amount());
+    println!("{qaz:?}");
 }
 
 */
