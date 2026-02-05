@@ -30,7 +30,7 @@
 * Trait Bound :
 ?           A trait Bound requires that a generic type implement a specific trait....
 
-* Trait Object : 
+* Trait Object :
 ?           A Trait object is an instances of the type that implements a particular trait whose methods will be accessed a run time using a features called dynamic dispatch .....
 
 * Constant :
@@ -48,7 +48,7 @@
 * Supertrait :
 ?           A supertrait is a trait from which another trait inherits functionality....
 ?           The parent is called the super trait and
-?           The child is called a sub trait... 
+?           The child is called a sub trait...
 
 */
 
@@ -587,7 +587,110 @@ fn main() {
 
 */
 
-// * 
+// * generics in traits
+
+/*
+
+// -----------------------------------------------------------------
+// ----------------------------Investment---------------------------
+// -----------------------------------------------------------------
+
+trait Investment<T> {
+    fn amount(&mut self) -> T; //GETTER METHOD
+
+    fn double_amount(&mut self) {}
+}
+// --------------------------------------------------------------
+// ----------------------------taxable---------------------------
+// --------------------------------------------------------------
+
+trait Taxable: Investment<f64> {
+    const TAX_RATE: f64 = 0.25;
+
+    fn tax_bill(&mut self) -> f64 {
+        &self.amount() * Self::TAX_RATE
+    }
+}
+
+// -------------------------------------------------------------
+// ----------------------------income---------------------------
+// -------------------------------------------------------------
+
+#[derive(Debug)]
+struct Income {
+    amount: f64,
+}
+impl Investment<f64> for Income {
+    fn amount(&mut self) -> f64 {
+        self.amount
+    }
+    fn double_amount(&mut self) {
+        self.amount *= 2.0
+    }
+}
+impl Taxable for Income {}
+
+// ------------------------------------------------------------
+// ----------------------------bonus---------------------------
+// ------------------------------------------------------------
+
+#[derive(Debug)]
+struct Bonus {
+    b_amount: f64,
+}
+impl Investment<f64> for Bonus {
+    fn amount(&mut self) -> f64 {
+        self.b_amount
+    }
+
+    fn double_amount(&mut self) {
+        self.b_amount *= 2.0
+    }
+}
+
+impl Taxable for Bonus {
+    const TAX_RATE: f64 = 0.5;
+}
+// ------------------------------------------------------------
+// ----------------------------QualityTime---------------------
+// ------------------------------------------------------------
+#[derive(Debug)]
+struct QualityTime {
+    minutes: u64,
+}
+impl Investment<u64> for QualityTime {
+    fn amount(&mut self) -> u64 {
+        self.minutes
+    }
+
+    fn double_amount(&mut self) {
+        self.minutes *= 2
+    }
+}
+// -----------------------------------------------------------
+// ----------------------------MAIN---------------------------
+// -----------------------------------------------------------
+
+fn main() {
+    let mut wer = Income { amount: 10000.00 };
+    println!("{:.2}", wer.tax_bill());
+    println!("{:?}", wer.amount());
+    println!("{:?}", wer.double_amount());
+    println!("{wer:?}");
+
+    let mut qwe = Bonus { b_amount: 10000.00 };
+    println!("{:.2}", qwe.tax_bill());
+    println!("{:?}", qwe.amount());
+    println!("{:?}", qwe.double_amount());
+    println!("{qwe:?}");
+
+    let mut qaz = QualityTime { minutes: 180 };
+    println!("{:?}", qaz.amount());
+    println!("{:?}", qaz.double_amount());
+    println!("{qaz:?}");
+}
+*/
+
+// *
 
 /* */
-
