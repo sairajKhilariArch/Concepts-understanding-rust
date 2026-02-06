@@ -187,5 +187,17 @@ fn main() {
 
 */
 
+// * Formatter of the Debug trait 
+
+/*
+impl Debug for Apple {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
+        f.debug_struct("Apple")
+            .field("KIND", &self.kind)
+            .field("PRICE", &self.price)
+            .finish()
+    }
+}
+*/
 
 
