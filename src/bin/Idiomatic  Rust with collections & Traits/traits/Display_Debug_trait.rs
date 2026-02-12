@@ -8,7 +8,7 @@
 ?           as followed in the example........../
 
 * Debug Trait :
-?           It is same as the display but for the custimized version for the developer reading...
+?           It is same as the display but for the customized version for the developer reading...
 
 
 
@@ -68,16 +68,16 @@ use std::fmt::{Display, Formatter, Result};
 
 
 enum AppleKind {
-    Japnese,
+    Japaneses,
     Kashmiri,
-    Canadien,
+    Canadian,
 }
 
 impl Display for AppleKind {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result {
         match self {
-            AppleKind::Canadien => write!(f, "Canadien"),
-            AppleKind::Japnese => write!(f, "Japnese"),
+            AppleKind::Canadian => write!(f, "Canadian"),
+            AppleKind::Japanese => write!(f, "Japanese"),
             AppleKind::Kashmiri => write!(f, "Kashmiri"),
         }
     }
@@ -106,7 +106,7 @@ fn main() {
     println!("hello ");
 
     let a1 = Apple {
-        kind: AppleKind::Japnese,
+        kind: AppleKind::Japanese,
         price: 180,
     };
 
@@ -126,15 +126,15 @@ use std::fmt::{Debug, Display, Formatter, Result};
 // ---------------------------------------------------------------------
 
 enum AppleKind {
-    Japnese,
+    Japanese,
     Kashmiri,
-    Canadien,
+    Canadian,
 }
 impl Display for AppleKind {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result {
         match self {
-            AppleKind::Canadien => write!(f, "Canadien"),
-            AppleKind::Japnese => write!(f, "Japnese"),
+            AppleKind::Canadian => write!(f, "Canadian"),
+            AppleKind::Japanese => write!(f, "Japanese"),
             AppleKind::Kashmiri => write!(f, "Kashmiri"),
         }
     }
@@ -143,8 +143,8 @@ impl Display for AppleKind {
 impl Debug for AppleKind {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result {
         match self {
-            AppleKind::Canadien => write!(f, "AppleKind::Canadien"),
-            AppleKind::Japnese => write!(f, "AppleKind::Japnese"),
+            AppleKind::Canadian => write!(f, "AppleKind::Canadian"),
+            AppleKind::Japanese => write!(f, "AppleKind::Japanese"),
             AppleKind::Kashmiri => write!(f, "AppleKind::Kashmiri"),
         }
     }
@@ -178,7 +178,7 @@ fn main() {
     println!("hello ");
 
     let a1 = Apple {
-        kind: AppleKind::Japnese,
+        kind: AppleKind::Japanese,
         price: 180,
     };
 
