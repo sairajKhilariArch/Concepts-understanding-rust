@@ -7,6 +7,9 @@
 ?           The Clone Trait models the ability to create a duplicate of an instance ....
 ?           can use the derive clone as trait if the all fields of the struct implement clone trait.....
 
+*Copy :
+?           Copy trait is a child node of the Clone trait so,
+?           if you say derive clone then also u can use the copy trait
 
 */
 
@@ -131,3 +134,34 @@ fn main() {
 
 */
 
+// * Copy trait :
+
+/*
+
+#[derive(Debug, Clone)]
+struct Duration {
+    hours: u32,
+    minutes: u32,
+    seconds: u32,
+}
+
+impl Duration {
+    fn new(hours: u32, minutes: u32, seconds: u32) -> Self {
+        Self {
+            hours,
+            minutes,
+            seconds,
+        }
+    }
+}
+
+impl Copy for Duration {}
+
+fn main() {
+    let first_hour = Duration::new(1, 0, 0);
+
+    let another_hour = first_hour;
+
+    println!("{another_hour:?}");
+}
+*/
