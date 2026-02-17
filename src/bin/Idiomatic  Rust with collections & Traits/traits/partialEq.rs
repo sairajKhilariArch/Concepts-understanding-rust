@@ -5,6 +5,7 @@
 
 */
 
+// * Partialeq on trait
 /*
 
 struct Flight {
@@ -48,5 +49,39 @@ fn main() {
     println!("{}", a == b);
 }
 
+
+*/
+
+// * partialeq on Enum
+/*
+
+enum Musician {
+    Gitter(String),
+    Piano(String),
+}
+impl PartialEq for Musician {
+    fn eq(&self, other: &Self) -> bool {
+        match self {
+            Self::Gitter(name) => match other {
+                Musician::Gitter(other_name) => name == other_name,
+                Musician::Piano(_) => false,
+            },
+            Self::Piano(name) => match other {
+                Musician::Gitter(_) => false,
+                Musician::Piano(other_name) => name == other_name,
+            },
+        }
+    }
+}
+fn main() {
+    let a = Musician::Gitter(String::from("a"));
+    let b = Musician::Piano(String::from("b"));
+    let c = Musician::Piano(String::from("b"));
+    let d = Musician::Gitter(String::from("d"));
+    println!("{}", a == b); // ^ false
+    println!("{}", b == c); // ^ true
+    println!("{}", c == d); // ^ false
+    println!("{}", d == a); // ^ false
+}
 
 */
