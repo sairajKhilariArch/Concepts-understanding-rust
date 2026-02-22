@@ -50,6 +50,10 @@
 ?           The parent is called the super trait and
 ?           The child is called a sub trait...
 
+* Associated type:
+?           An Associated type is a placeholder for a type that is required within a trait......
+
+
 */
 
 // ! this is a example of the simple trait and how trait bound work
@@ -693,4 +697,35 @@ fn main() {
 
 // *
 
-/* */
+// * Associated type
+
+/* 
+use std::ops::Add;
+
+#[derive(Debug, Clone)]
+struct Lunch {
+    cost: f64,
+}
+
+impl Add for Lunch {
+    type Output = f64;
+
+    fn add(self, rhs: Self) -> Self::Output {
+        self.cost + rhs.cost
+    }
+}
+
+fn add_two_numbers<T: Add<Output = T>>(a: T, b: T) -> T {
+    a + b
+}
+fn main() {
+    let one = Lunch { cost: 20.99 };
+    let two = Lunch { cost: 10.99 };
+
+    println!("{:.2}", one.clone() + two.clone());
+    println!("{:.2}", add_two_numbers(one.cost, two.cost));
+}
+
+*/
+
+
