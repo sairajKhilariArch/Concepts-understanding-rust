@@ -2,8 +2,23 @@
 * PartialEq Trait:
 ?           The PartialEq trait establishes equality between two values.....
 
+?           The partialEq trait indicates a type can be compared with the equality and inequality signs.
+?           We can define equality between instances of same type or a different types...
+
+
+* Eq Trait :
+?           The Eq trait adds 3 more requirements to a type.
+?                   Reflexive : a == a ;
+?                   Symmetric : a == b implies b == a;
+?                   Transitive : a == b and b == c implies a == c;
+
+
 * PartialOrd trait: ( Partial order trait)
 ?           THe PartialOrd trait indicates that a type can be ordered/sorted.
+
+?           The PartialOrd subtrait indicates a type can be ordered / sorted...
+?           NaN (not a number ) is a valid floating-point value that is returned in invalid numeric operations...
+?           Because Rust does not consider NaNs equal or sortable , floating-point types implements the PartialEq and PartialOrd traits , but not implement Eq or Ord...
 
 */
 
