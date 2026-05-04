@@ -1,3 +1,9 @@
+// fn main() {
+//     println!("hello ");
+// }
+
 fn main() {
-    println!("hello ");
+    let name = String::from("sairaj khilari");
+    let transfer = || println!("{}",name);
+    println!("{:?}",transfer());
 }
