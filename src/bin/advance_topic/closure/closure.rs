@@ -27,6 +27,11 @@
 
 
 
+* Trait    | Captures by                  | Can modify?  | Can consume?  | Callable multiple times?  |
+! -------- | ---------------------------- | -----------  | ------------  | ------------------------  |
+& `Fn`     | `&T` (immutable reference)   | ❌ No        | ❌ No         | ✅ Yes                    |
+& `FnMut`  | `&mut T` (mutable reference) | ✅ Yes       | ❌ No         | ✅ Yes                    |
+& `FnOnce` | `T` (ownership)              | ✅ Yes       | ✅ Yes        | ❌ Only once              |
 
 
 
