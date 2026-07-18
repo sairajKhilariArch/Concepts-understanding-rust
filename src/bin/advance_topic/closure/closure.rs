@@ -97,17 +97,14 @@ fn main() {
 }
 */
 
-
 // * Closure Heap data Transferring Clone data
 
 /*
- * 
- * fn main() {
- *    let name = String::from("sairaj khilari");
- *    let transfer = || name.clone();
- *    println!("{}",transfer());
- * }
+*
+* fn main() {
+*    let name = String::from("sairaj khilari");
+*    let transfer = || name.clone();
+*    println!("{}",transfer());
+* }
 
- */
-
-
+*/
