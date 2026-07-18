@@ -108,3 +108,42 @@ fn main() {
 * }
 
 */
+
+// * Closure Fn :
+/*
+fn main() {
+    let first = String::from("sairaj");
+
+    let closure = || {
+        println!("{first}");
+    };
+    closure();
+    closure();
+    println!("{first}");
+    closure();
+}
+
+
+/// ^ Here as you can see the closure can run multiple times a Fn closure can run multiple times ..
+/// ^ so even if a string is given to it ,it can run multiple time at it will determine the input as a reference so it will not move or consume the reference ,...
+/// ^ this happens because the fn closure  trait did not moved and saved that variable ,.. until their is no saving of the number or any variable type in the closure it will not move the variable in the closure trait so it will be continue to work outside main variable and the closure ... 
+
+/// & IF YOU WANT TO MOVE THR VARIABLE in the closure use the word "move" before ||
+
+eg:
+fn main() {
+    let first = String::from("sairaj");
+    /// ! As you can see here like this 
+    let closure = move || {
+        println!("{first}");
+    };
+    closure();
+    closure();
+    println!("{first}");
+    closure();
+}
+
+/// * now that it has moved in the closure if will give an error if it is used by the parent variable from which it was moved from.. but can be used in the closure multiple times as it has the ownership now
+
+*/
+
