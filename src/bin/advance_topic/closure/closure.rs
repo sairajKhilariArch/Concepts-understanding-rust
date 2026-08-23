@@ -126,14 +126,14 @@ fn main() {
 
 /// ^ Here as you can see the closure can run multiple times a Fn closure can run multiple times ..
 /// ^ so even if a string is given to it ,it can run multiple time at it will determine the input as a reference so it will not move or consume the reference ,...
-/// ^ this happens because the fn closure  trait did not moved and saved that variable ,.. until their is no saving of the number or any variable type in the closure it will not move the variable in the closure trait so it will be continue to work outside main variable and the closure ... 
+/// ^ this happens because the fn closure  trait did not moved and saved that variable ,.. until their is no saving of the number or any variable type in the closure it will not move the variable in the closure trait so it will be continue to work outside main variable and the closure ...
 
 /// & IF YOU WANT TO MOVE THR VARIABLE in the closure use the word "move" before ||
 
 eg:
 fn main() {
     let first = String::from("sairaj");
-    /// ! As you can see here like this 
+    /// ! As you can see here like this
     let closure = move || {
         println!("{first}");
     };
@@ -145,5 +145,23 @@ fn main() {
 
 /// * now that it has moved in the closure if will give an error if it is used by the parent variable from which it was moved from.. but can be used in the closure multiple times as it has the ownership now
 
-*/
 
+* RETAIN Method :
+?               This method is called when wants to omit something from the string or var it use closure as a input as shown in the eg:
+
+fn main() {
+    let mut name = String::from("sairaj");
+    let mut del_char = String::new();
+    name.retain(|name| match name {
+        'a' => {
+            del_char.push('a');
+            false
+        }
+        _ => true,
+    });
+    println!("NAME :{:?}", name);
+    println!("Deleted char :{:?}", del_char);
+}
+
+
+*/
